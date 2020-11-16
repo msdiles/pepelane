@@ -1,6 +1,7 @@
 export const state = () => ({
   vehicles: [],
-  filterOption:'whatever'
+  filterOption:'whatever',
+  formOpen:false
 })
 
 export const mutations = {
@@ -12,5 +13,15 @@ export const mutations = {
   },
   setFilterOption(state,option){
     state.filterOption =option
+  },
+  openForm(state){
+    state.formOpen=true
+  },
+  closeForm(state){
+    state.formOpen=false
+  },
+  addVehicle(state,vehicle){
+    state.vehicles =[...state.vehicles,vehicle]
+    console.log(state.vehicles)
   }
 }

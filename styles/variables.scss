@@ -1,12 +1,63 @@
-$main400:#4959FF;
-$main500:#1B2FFF;
-$base0:#FCFCFC;
-$base50:#F3F4F7;
-$base200:#99A7B5;
-$base300:#677B8F;
-$base500:#012345;
-$base600:#011C37;
-$secondary400:#F84AB3;
-$secondary500:#F71D9F;
+//light
+$textMain: #012345; //base500
+$textSide: #677B8F; //base300
+$backgroundMain: #fcfcfc; //base0;
+$backgroundMainOpacity: rgba(252, 252, 252, 0);
+$backgroundSide: #F3F4F7; //base50
+$interactive: #4959FF; //main400
+$disabled: #99A7B5; //base200
+$secondaryMine: #F84AB3; //secondary400
+$secondarySide: #F71D9F; //secondary500
+//dark
+$textMainDark: #fcfcfc; //base0
+$textSideDark: #99A7B5; //base200
+$backgroundMainDark: #011C37; //base600
+$backgroundMainDarkOpacity: rgba(1, 35, 69, 0);
+$backgroundSideDark: #012345; //base500
+$interactiveDark: #4959FF; //main400
+$disabledDark: #99A7B5; //base200
+$secondaryMine: #F84AB3; //secondary400
+$secondarySide: #F71D9F; //secondary500
+
+:root {
+  --main-text: #{$textMain};
+  --side-text: #{$textSide};
+  --background-main: #{$backgroundMain};
+  --background-main-opactiy: #{$backgroundMainOpacity};
+  --background-side: #{$backgroundSide};
+  --interactive: #{$interactive};
+  --disabled: #{$disabled};
+  --secondary-side: #{$secondarySide};
+  --secondary-mine: #{$secondaryMine};
+}
+
+.dark-theme {
+  --main-text: #{$textMainDark};
+  --side-text: #{$textSideDark};
+  --background-main: #{$backgroundMainDark};
+  --background-main-opactiy: #{$backgroundMainDarkOpacity};
+  --background-side: #{$backgroundSideDark};
+  --interactive: #{$interactiveDark};
+  --disabled: #{$disabled};
+  --secondary-side: #{$secondarySide};
+  --secondary-mine: #{$secondaryMine};
+}
+
+
+$main400: #4959FF;
+$main500: #1B2FFF;
+$base0: #fcfcfc;
+$base50: #F3F4F7;
+$base200: #99A7B5;
+$base300: #677B8F;
+$base500: #012345;
+$base600: #011C37;
+$secondary400: #F84AB3;
+$secondary500: #F71D9F;
+//
+//base500 -> base0
+//base300 ->base200
+//base50->base600
+//base0->base500
 
 

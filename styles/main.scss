@@ -6,6 +6,8 @@
   border: 0;
   font-family: Codec Pro, sanserif;
   box-sizing:border-box;
+
+  transition: color 200ms,background-color 200ms;
 }
 
 
@@ -22,13 +24,13 @@ html, body, #__nuxt, #__layout {
 }
 
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
-  background: $main400;
-  border-radius: 12px;
-  color:$base0;
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
 }

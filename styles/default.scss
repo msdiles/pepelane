@@ -1,0 +1,155 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+
+
+  background: $main400;
+  border-radius: 12px;
+  color: $base0;
+
+  font-size: 16px;
+  line-height: 14px;
+
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  transition: opacity 200ms;
+
+  @include interactive(1.05, 0.95, 100ms);
+
+  @include for-mobile-only {
+    font-size: 14px;
+    line-height: 12px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+// max = 600px  //
+.show-on-mobile-only {
+  @include for-mobile-only {
+    display: block;
+  }
+}
+
+.hide-on-mobile {
+  @include for-mobile-only {
+    display: none;
+  }
+}
+
+// min = 600px  //
+.show-on-phone-or-tablet-portrait-up {
+  @include for-mobile-up {
+    display: block !important;
+  }
+}
+
+.hide-on-phone-or-tablet-portrait-up {
+  @include for-mobile-up {
+    display: none !important;
+  }
+}
+
+// min = 600px max = 1000  //
+.show-on-tablet-portrait-only {
+  @include for-tablet-portrait-only {
+    display: block !important;
+  }
+}
+
+.hide-on-tablet-portrait-only {
+  @include for-tablet-portrait-only {
+    display: none !important;
+  }
+}
+
+// min = 1000px  //
+.show-on-tablet-landscape-up {
+  @include for-tablet-landscape-up {
+    display: block !important;
+  }
+}
+
+.hide-on-tablet-landscape-up {
+  @include for-tablet-landscape-up {
+    display: none !important;
+  }
+}
+
+// min = 1000px max = 1200px  //
+.show-on-table-landscape-only {
+  @include for-tablet-landscape-only {
+    display: block !important;
+  }
+}
+
+.hide-on-table-landscape-only {
+  @include for-tablet-landscape-only {
+    display: none !important;
+  }
+}
+
+// min = 1200px  //
+.show-on-desktop-up {
+  @include for-desktop-up {
+    display: block !important;
+  }
+}
+
+.hide-on-desktop-up {
+  @include for-desktop-up {
+    display: none !important;
+  }
+}
+
+// min = 1200px max = 1920  //
+.show-on-desktop-only {
+  @include for-desktop-only {
+    display: block !important;
+  }
+}
+
+.hide-on-desktop-only {
+  @include for-desktop-only {
+    display: none !important;
+  }
+}
+
+// min = 1920 //
+.show-on-big-desktop-up {
+  @include for-big-desktop-up {
+    display: block !important;
+  }
+}
+
+.hide-on-big-desktop-up {
+  @include for-big-desktop-up {
+    display: none !important;
+  }
+}
+
+.us-none {
+  user-select: none;
+}

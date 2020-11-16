@@ -9,6 +9,33 @@
   }
 }
 
+@mixin for-tablet-portrait-only {
+  @media (min-width: 600px) and (max-width: 899px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 1000px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1920px) {
+    @content;
+  }
+}
+
+
 @mixin for-big-desktop-up {
   @media (min-width: 1920px) {
     @content;
@@ -16,14 +43,14 @@
 }
 
 
-.show-on-mobile-only{
-  @include for-mobile-only{
-    display: block;
+@mixin interactive($hover,$active,$time){
+  transition: transform $time linear;
+  cursor: pointer;
+  &:hover{
+    transform: scale($hover);
   }
-}
 
-.hide-on-mobile{
-  @include for-mobile-only{
-    display: none;
+  &:active{
+    transform: scale($active);
   }
 }
