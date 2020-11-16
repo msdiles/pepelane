@@ -139,6 +139,7 @@ export default {
 
   @include for-tablet-landscape-up {
     width: 50%;
+    min-height: 800px;
   }
 
   img {
