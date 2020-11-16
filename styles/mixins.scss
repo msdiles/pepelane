@@ -1,0 +1,29 @@
+@mixin for-mobile-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-mobile-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+
+.show-on-mobile-only{
+  @include for-mobile-only{
+    display: block;
+  }
+}
+
+.hide-on-mobile{
+  @include for-mobile-only{
+    display: none;
+  }
+}
