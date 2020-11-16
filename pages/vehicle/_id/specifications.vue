@@ -154,7 +154,6 @@ export default {
 .featureText {
   font-size: 14px;
   line-height: 20px;
-  white-space: pre-line;
   color: var(--side-text);
 }
 </style>
